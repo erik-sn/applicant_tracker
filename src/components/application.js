@@ -9,33 +9,22 @@ const styleWithModal = {
   pointerEvents: 'none',
 };
 
-class Application extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      path: undefined,
-    };
+const Application = () => {
+  let style;
+  if (typeof window !== 'undefined') {
+    style = window.location.pathname !== '/' ? styleWithModal : {};
   }
-
-  componentDidMount() {
-    const path = window.location.pathname;
-    this.setState({ path });
-  }
-
-  render() {
-    return (
-      <div className="application-container">
-        <Route path="/:applicantName" component={ApplicantDetail} />
-        <div
-          className="application__inner"
-          style={this.state.path !== '/' ? styleWithModal : {}}
-        >
-          <ApplicantTable />
-        </div>
+  return (
+    <div className="application-container">
+      <Route path="/:applicantName" component={ApplicantDetail} />
+      <div
+        className="application__inner"
+        style={style }
+      >
+        <ApplicantTable />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default Application;
