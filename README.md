@@ -7,7 +7,7 @@ yarn
 npm run dev
 ```
 
-browse to localhost:4000
+browse to localhost:3000
 
 ### Running Tests
 
