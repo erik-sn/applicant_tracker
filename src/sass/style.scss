@@ -1,0 +1,29 @@
+$background: whitesmoke;
+
+$font-light: #999;
+$font-dark: darken($font-light, 15%);
+
+html, body {
+  background: $background;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  min-width: 1010px;
+  overflow-x: scroll;
+}
+
+.application-container {
+  margin: 15px 50px;
+}
+
+.circle {
+  border-radius: 8px;
+  height: 16px;
+  width: 16px;
+}
+
+.picture {
+  background: lighten(#999, 20%);
+  border-radius: 20px;
+  height: 40px;
+  width: 40px;
+}

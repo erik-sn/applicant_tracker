@@ -1,0 +1,108 @@
+@import "./style.scss";
+
+.table__container {
+  overflow-x: hidden;
+}
+
+.table__row {
+  align-items: center;
+  background: white;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  color: $font-dark;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 25px;
+  margin: 10px 0px;
+  text-decoration: none;
+  transition: transform 0.5s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+#table__header {
+  box-shadow: none;
+  color: $font-light;
+  font-weight: bold;
+  margin: 0px;
+  padding-bottom: 5px;
+  background: none;
+  font-size: 0.8rem;
+
+  div {
+    text-transform: uppercase !important;
+  }
+
+  &:hover {
+    transform: none;
+  }
+}
+
+.table__col {
+  padding: 2px 5px;
+  text-transform: capitalize;
+}
+
+.table__col:nth-child(1) {
+  width: 25%;
+}
+
+.table__col:nth-child(2) {
+  width: 20%;
+}
+
+.table__col:nth-child(3) {
+  width: 12%;
+}
+
+.table__col:nth-child(4) {
+  width: 14%;
+  text-align: center;
+}
+
+.table__col:nth-child(5) {
+  width: 14%;
+}
+
+.table__col:nth-child(6) {
+  width: 14%;
+}
+
+.table__col:nth-child(7) {
+  width: 5%;
+}
+
+
+/** column specific css */
+.table__name {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.table__name_picture {
+  margin-right: 15px;
+}
+
+.applicant__name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+.applicant__email {
+  font-size: 0.9rem;
+  text-transform: lowercase;
+}
+
+
+.table__status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.table__status_icon {
+  margin-right: 15px;
+}
