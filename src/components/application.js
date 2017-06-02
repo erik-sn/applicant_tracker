@@ -36,6 +36,6 @@ class Application extends Component {
       </div>
     );
   }
-};
+}
 
 export default Application;
